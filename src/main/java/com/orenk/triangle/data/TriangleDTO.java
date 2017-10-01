@@ -61,6 +61,9 @@ public class TriangleDTO {
                 '}';
     }
 
+    public TriangleDTO() {
+    }
+
     public TriangleDTO(Long id, Integer edgeA, Integer edgeB, Double hypotenuseEdge) {
         this.id = id;
         this.edgeA = edgeA;

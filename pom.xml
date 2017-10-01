@@ -6,7 +6,10 @@
 	<groupId>com.orenk</groupId>
 	<artifactId>triangle</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>rest-client</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>triangle</name>
 	<description>Demo project for Spring Boot</description>
