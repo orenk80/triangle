@@ -63,11 +63,13 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputDirectory>${project.build.directory}/products</outputDirectory>
+
                             <resources>
                                 <resource>
-                                    <filtering>false</filtering>
-                                    <directory>${project.basedir}/src/main/resources/folders</directory>
+                                    <filtering>logback.xml</filtering>
+                                    <directory>${project.basedir}/src/main/resources</directory>
+
                                 </resource>
                             </resources>
                         </configuration>
