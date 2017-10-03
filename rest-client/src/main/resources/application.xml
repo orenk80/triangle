@@ -4,6 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com" />
+    <context:component-scan base-package="com.assignment.client" />
+    <context:property-placeholder ignore-resource-not-found="true"
+                                  location="classpath:rest.client.properties,file:conf/rest.client.properties" />
 
+    <bean id="nTriangles" class="java.lang.Integer">
+        <constructor-arg index="0" value="${triangles.generate.number}"/>
+    </bean>
 </beans>
