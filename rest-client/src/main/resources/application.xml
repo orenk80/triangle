@@ -6,7 +6,7 @@
 
     <context:component-scan base-package="com.assignment.client" />
     <context:property-placeholder ignore-resource-not-found="true"
-                                  location="classpath:rest.client.properties,file:conf/rest.client.properties" />
+                                  location="classpath:rest.client.properties,file:rest.client.properties" />
 
     <bean id="nTriangles" class="java.lang.Integer">
         <constructor-arg index="0" value="${triangles.generate.number}"/>
