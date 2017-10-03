@@ -41,13 +41,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<outputDirectory>${project.build.directory}/scripts</outputDirectory>-->
+
                 <executions>
                     <execution>
                         <goals>
                             <goal>repackage</goal>
                         </goals>
+
                         <configuration>
                             <classifier>exec</classifier>
+                            <outputDirectory>${project.build.directory}/scripts</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
@@ -63,17 +67,18 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputDirectory>${project.build.directory}/scripts</outputDirectory>
                             <resources>
                                 <resource>
                                     <filtering>false</filtering>
-                                    <directory>${project.basedir}/src/main/resources/folders</directory>
+                                    <directory>${project.basedir}/src/main/resources/</directory>
                                 </resource>
                             </resources>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>
